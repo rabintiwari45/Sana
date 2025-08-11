@@ -56,6 +56,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
 def set_fsdp_env():
+    print("Running the FSDP setting")
     # Basic FSDP settings
     os.environ["ACCELERATE_USE_FSDP"] = "true"
 
@@ -1082,4 +1083,8 @@ def main(cfg: SanaConfig) -> None:
 
 
 if __name__ == "__main__":
+  try:
     main()
+  except Exception as e:
+    import traceback
+    traceback.print_exc()
