@@ -20,7 +20,7 @@ model:
   model: SanaMS_1600M_P1_D20
   image_size: 1024
   mixed_precision: bf16 # ['fp16', 'fp32', 'bf16']
-  fp32_attention: true
+  fp32_attention: false
   load_from:
   resume_from:
   aspect_ratio_type: ASPECT_RATIO_1024
@@ -80,7 +80,7 @@ train:
   seed: 1
   train_batch_size: 64
   num_epochs: 100
-  gradient_accumulation_steps: 1
+  gradient_accumulation_steps: 4
   grad_checkpointing: true
   gradient_clip: 0.1
   optimizer:
