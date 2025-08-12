@@ -20,7 +20,7 @@ model:
   model: SanaMS_600M_P1_D28
   image_size: 512
   mixed_precision: fp16
-  fp32_attention: true
+  fp32_attention: false
   load_from:
   resume_from:
   aspect_ratio_type: ASPECT_RATIO_512

@@ -21,6 +21,7 @@ import hashlib
 import json
 import os
 import os.path as osp
+from pickle import NONE
 import time
 import warnings
 from copy import deepcopy
@@ -499,8 +500,8 @@ def train(
                         epoch=epoch,
                         model=model,
                         accelerator=accelerator,
-                        optimizer=optimizer,
-                        lr_scheduler=lr_scheduler,
+                        optimizer=None,
+                        lr_scheduler=None,
                         step=global_step,
                         add_symlink=True,
                     )
@@ -513,8 +514,8 @@ def train(
                             epoch=epoch,
                             model=accelerator.unwrap_model(model),
                             model_ema=accelerator.unwrap_model(model_ema) if model_ema is not None else None,
-                            optimizer=optimizer,
-                            lr_scheduler=lr_scheduler,
+                            optimizer=None,
+                            lr_scheduler=None,
                             step=global_step,
                             generator=generator,
                             add_symlink=True,
@@ -589,8 +590,8 @@ def train(
                     epoch=epoch,
                     model=model,
                     accelerator=accelerator,
-                    optimizer=optimizer,
-                    lr_scheduler=lr_scheduler,
+                    optimizer=None,
+                    lr_scheduler=None,
                     step=global_step,
                     add_symlink=True,
                 )
@@ -604,8 +605,8 @@ def train(
                         step=global_step,
                         model=accelerator.unwrap_model(model),
                         model_ema=accelerator.unwrap_model(model_ema) if model_ema is not None else None,
-                        optimizer=optimizer,
-                        lr_scheduler=lr_scheduler,
+                        optimizer=None,
+                        lr_scheduler=None,
                         generator=generator,
                         add_symlink=True,
                     )
