@@ -16,7 +16,7 @@ fi
 
 default_step=20
 default_bs=50    # 1
-default_sample_nums=30000
+default_sample_nums=75
 default_sampling_algo="flow_dpm-solver"
 json_file="data/test/PG-eval-data/MJHQ-30K/meta_data.json"
 default_add_label=''

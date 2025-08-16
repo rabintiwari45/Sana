@@ -5,7 +5,7 @@ output_dir=output
 #### Infer Hyper
 default_step=20                             # inference step for diffusion model
 default_bs=50                                # batch size for inference
-default_sample_nums=30000                   # inference first $sample_nums sample in list(json.keys())
+default_sample_nums=75                   # inference first $sample_nums sample in list(json.keys())
 default_sampling_algo="dpm-solver"
 default_json_file="data/test/PG-eval-data/MJHQ-30K/meta_data.json"   # MJHQ-30K meta json
 default_add_label=''
@@ -161,7 +161,7 @@ clipscore=${clipscore:-true}
 imagereward=${imagereward:-false}
 dpg=${dpg:-false}
 
-np=${np:-8}
+np=${np:-1}
 step=${step:-$default_step}
 bs=${bs:-$default_bs}
 dataset=${dataset:-'custom'}

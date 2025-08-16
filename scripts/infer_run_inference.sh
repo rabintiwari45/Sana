@@ -5,10 +5,10 @@
 # output/Sana_600M_img1024/checkpoints/xxxxx.pth
 
 # ================= sampler & data =================
-default_np=8    # number of GPU to use
-default_step=20   # 14
-default_bs=50    # 1
-default_sample_nums=30000   # 10, 10000, 30000
+default_np=1   # number of GPU to use
+default_step=14   # 14
+default_bs=1    # 1
+default_sample_nums=75   # 10, 10000, 30000
 default_sampling_algo="flow_dpm-solver"
 default_add_label=''
 default_txt_file="asset/samples/samples.txt"
